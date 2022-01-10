@@ -1,30 +1,30 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include <time.h>
-int main()
+int point21()
 {
 	 int turn,number,point,sum=0,add,host,start;
 	 srand(time(NULL));
-	 printf("21ÂI¹CÀ¸³W«h:ª±®aÂI¼Æ¥²¶·¤j©ó²ø®a§Y¬°Àò³Ó¡A­Y¤p©ó©Î¶W¹L21ÂI(¦©3¤À)«hµø¬°¥¢±Ñ\n");
-	 printf("¡A¹L¤­ÃöÀò±o10¤À¡A¤À¼Æ¥[´î¨ú¨M©ó¤j©ó©Î¤p©ó²ø®aªºÂI¼Æ¡C¿é¤J1¶}©l¡A¿é¤J-1«hµ²§ô¹CÀ¸\n");
+	 printf("21é»éŠæˆ²è¦å‰‡:ç©å®¶é»æ•¸å¿…é ˆå¤§æ–¼èŠå®¶å³ç‚ºç²å‹ï¼Œè‹¥å°æ–¼æˆ–è¶…é21é»(æ‰£3åˆ†)å‰‡è¦–ç‚ºå¤±æ•—\n");
+	 printf("ï¼Œéäº”é—œç²å¾—10åˆ†ï¼Œåˆ†æ•¸åŠ æ¸›å–æ±ºæ–¼å¤§æ–¼æˆ–å°æ–¼èŠå®¶çš„é»æ•¸ã€‚è¼¸å…¥1é–‹å§‹ï¼Œè¼¸å…¥-1å‰‡çµæŸéŠæˆ²\n");
 	 scanf_s("%d", &start);
-	 host=rand() % 5 + 17;//²ø®aÂI¼Æ
+	 host=rand() % 5 + 17;//èŠå®¶é»æ•¸
 		 for (turn = 0; turn < 5; turn++)
 		 {
 			 number = rand() % 5 + 1;
 			 sum = sum + number;
 			 if (turn == 4 && sum <= 21)
 				 {
-				 printf("±z¥Ø«e¬°%dÂI\n", sum);
-				 printf("®¥³ß¹L¤­Ãö!!!Àò±oÂI¼Æ10ÂI!\n");
+				 printf("æ‚¨ç›®å‰ç‚º%dé»\n", sum);
+				 printf("æ­å–œéäº”é—œ!!!ç²å¾—é»æ•¸10é»!\n");
 				 point = 10;
 				 system("pause");
 				 return point;
 				 }
 			 else if (sum <= 21)
 			 {
-				 printf("±z¥Ø«e¬°%dÂI\n", sum);
-				 printf("½Ğ°İÁÙ­nÄ~Äò¶Ü?(¿é¤J1¥[µP¡A0¤£¥[µP)\n");
+				 printf("æ‚¨ç›®å‰ç‚º%dé»\n", sum);
+				 printf("è«‹å•é‚„è¦ç¹¼çºŒå—?(è¼¸å…¥1åŠ ç‰Œï¼Œ0ä¸åŠ ç‰Œ)\n");
 				 scanf_s("%d", &add);
 				 if (add == 1)
 				 {
@@ -35,16 +35,16 @@ int main()
 				 {
 					 if (host >= sum)
 					 {
-						 printf("²ø®aÂI¼Æ¬°%d¡A§A¬°%d¡A²ø®aÀò³Ó!\n",host,sum);
-						 printf("¦©°£ÂI¼Æ%dÂI:\n",host - sum);
+						 printf("èŠå®¶é»æ•¸ç‚º%dï¼Œä½ ç‚º%dï¼ŒèŠå®¶ç²å‹!\n",host,sum);
+						 printf("æ‰£é™¤é»æ•¸%dé»:\n",host - sum);
 						 point = -(host - sum);
 						 system("pause");
 						 return point;
 					 }
 					 else
 					 {
-						 printf("²ø®aÂI¼Æ¬°%d¡A§A¬°%d¡Aª±®aÀò³Ó!\n", host, sum);
-						 printf("Àò±oÂI¼Æ%dÂI\n",sum - host);
+						 printf("èŠå®¶é»æ•¸ç‚º%dï¼Œä½ ç‚º%dï¼Œç©å®¶ç²å‹!\n", host, sum);
+						 printf("ç²å¾—é»æ•¸%dé»\n",sum - host);
 						 point = sum - host;
 						 system("pause");
 						 return point;
@@ -53,7 +53,7 @@ int main()
 			 }
 			 else
 			 {
-				 printf("Ãz¬µ¤F!²ø®aÀò³Ó!¦©°£ÂI¼Æ3ÂI!\n");
+				 printf("çˆ†ç‚¸äº†!èŠå®¶ç²å‹!æ‰£é™¤é»æ•¸3é»!\n");
 				 point = -3;
 				 system("pause");
 				 return point;
