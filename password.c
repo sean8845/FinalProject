@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-	printf("²×·¥±K½X¹CÀ¸³W«h:½Ğ¦b0~100¤º²q¥X¼Æ¦r(¥]¬A0©M100)¡A¶È¦³¤­¦¸¾÷·|\n­Y¤­¦¸¬Ò¥¢±ÑÂI¼Æ±N¦©¤@¤À¡A²Ä¤@¦¸¦¨¥\¥[¤»¤À¡B²Ä¤G¦¸¦¨¥\¥[¤­¤À¥H¦¹Ãş±À\n¿é¤J-1«hµ²§ô¹CÀ¸\n");
+int passward() {
+	printf("çµ‚æ¥µå¯†ç¢¼éŠæˆ²è¦å‰‡:è«‹åœ¨0~100å…§çŒœå‡ºæ•¸å­—(åŒ…æ‹¬0å’Œ100)ï¼Œåƒ…æœ‰äº”æ¬¡æ©Ÿæœƒ\nè‹¥äº”æ¬¡çš†å¤±æ•—é»æ•¸å°‡æ‰£ä¸€åˆ†ï¼Œç¬¬ä¸€æ¬¡æˆåŠŸåŠ å…­åˆ†ã€ç¬¬äºŒæ¬¡æˆåŠŸåŠ äº”åˆ†ä»¥æ­¤é¡æ¨\nè¼¸å…¥-1å‰‡çµæŸéŠæˆ²\n");
 	printf("------------------------------------------------------------------\n");
 	srand(time(NULL));
 	int left, right,ans,a,point=0,x,i,con=0;
@@ -16,33 +16,33 @@ int main() {
 		//printf("%d\n", ans);
 
 		for ( i = 0; i < 5 ; i++) {
-			printf("½Ğ¦b%d¨ì%d¤¤¡A¥ô¿ï¤@­Ó¼Æ¦r:", left, right);
+			printf("è«‹åœ¨%dåˆ°%dä¸­ï¼Œä»»é¸ä¸€å€‹æ•¸å­—:", left, right);
 			scanf_s("%d", &a);
 			if (left <= a && right >= a) {
 				if (a == ans) {
-					printf("®¥³ß¥¿½T!\n\n");
+					printf("æ­å–œæ­£ç¢º!\n\n");
 					point = point + 6 - i;
 					x = 1;
 					break;
 				}
 				else if (a > ans) {
 					right = a;
-					printf("¤Ó¤j¤F³á\n\n");
+					printf("å¤ªå¤§äº†å–”\n\n");
 				}
 				else {
 					left = a;
-					printf("¤Ó¤p¤F³á\n\n");
+					printf("å¤ªå°äº†å–”\n\n");
 				}
 			}
-			else printf("¿é¤J¿ù»~!  ¼Æ­È­n¦b%d¨ì%d¤§¶¡\n", left, right);
+			else printf("è¼¸å…¥éŒ¯èª¤!  æ•¸å€¼è¦åœ¨%dåˆ°%dä¹‹é–“\n", left, right);
 		}
 
-		if (x == 1) printf("®¥³ß§A¦b²Ä%d¦¸¦¨¥\²q¥Xµª®×!\nÂI¼Æ¬°:%d\n", i+1, point);
+		if (x == 1) printf("æ­å–œä½ åœ¨ç¬¬%dæ¬¡æˆåŠŸçŒœå‡ºç­”æ¡ˆ!\né»æ•¸ç‚º:%d\n", i+1, point);
 		else {
 			point = point-1;
-			printf("¥¿½Tµª®×¬°:%d  §A¨Ã¥¼²q¥Xµª®×¡A«Ü¥i±¤!\nÂI¼Æ¬°:%d\n",ans,point);
+			printf("æ­£ç¢ºç­”æ¡ˆç‚º:%d  ä½ ä¸¦æœªçŒœå‡ºç­”æ¡ˆï¼Œå¾ˆå¯æƒœ!\né»æ•¸ç‚º:%d\n",ans,point);
 		}
-		printf("±z¬O§_­nÄ~Äò¹CÀ¸(Ä~Äò½Ğ«ö0¡A°±¤î½Ğ«ö1):");
+		printf("æ‚¨æ˜¯å¦è¦ç¹¼çºŒéŠæˆ²(ç¹¼çºŒè«‹æŒ‰0ï¼Œåœæ­¢è«‹æŒ‰1):");
 		scanf_s("%d", &con);
 	}
 	
